@@ -1,0 +1,17 @@
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'),
+  url("~@/assets/inters/inters.woff") format("woff");
+}
+$timeline-inner-dot-small-size:	8px;
+$timeline-dot-small-size: 8px;
+$timeline-line-width: 2px;
+$app-bar-elevation: 1;
+$btn-text-transform:	capitalize;
+$material-light: (
+  'text-fields': (
+    'outlined': #DEB9C2,
+    'outlined-hover': #DEB9C2,
+  ),
+);
