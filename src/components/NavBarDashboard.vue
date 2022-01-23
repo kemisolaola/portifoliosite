@@ -17,7 +17,7 @@
       <v-btn
        color="#616161"
       class="nav-btn font-weight-bold   "
-      active-class= "active-class-nav red--text no-active text"
+      active-class= "active-class-nav red--text text--accent-3 no-active text"
         :to="item.route"
         text
       >

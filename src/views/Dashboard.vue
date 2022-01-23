@@ -43,6 +43,7 @@
     <template v-slot:append>
       <div class="pa-2">
             <v-img src="../assets/avatar.png" width="50" class="mx-auto mt-9"></v-img>
+                <p class="text-center profile-name">Briget Mary</p>
       </div>
     </template>
       </v-navigation-drawer>
@@ -200,8 +201,12 @@ color: #f22e5d;
   font-size: 12px;
   color: #bdbdbd;
 } 
+.profile-name {
+  font-size: 12px;
+  color: #bdbdbd;
+} 
 ::v-deep .my-checkbox-data .v-label {
  font-size: 12px;
-  color: #bdbdbd;
+  color: #aaa9a9;
 }
 </style>

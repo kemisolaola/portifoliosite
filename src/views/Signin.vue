@@ -9,7 +9,7 @@
           <p class="signin-title font-weight-black">Sign In to Order for a Service</p>
           <div class="pt-10">
           <p class="signin-text mb-1 mt-16 d-none d-sm-flex"> If you don’t have an account?</p>
-          <p class="signin-text mt-0 d-none d-sm-flex">You can <router-link to="/signup"><span class="signin-text-span"> Sign Up!</span></router-link></p>
+          <p class="signin-text mt-0 d-none d-sm-flex">You can <router-link to="/signup"><span class="signin-text-span">&nbsp;Sign Up!</span></router-link></p>
           </div>
         </v-col>
         <v-col cols="12" sm="6" md="5" lg="4">
@@ -51,7 +51,7 @@
               </v-col>
               <v-col cols="12" class="hidden-sm-and-up text-center">
                 <p class="signin-text text-center"> If you don’t have an account?</p>
-               <p class="signin-text mt-0">You can <router-link to="/signup"><span class="signin-text-span"> Sign Up!</span></router-link></p>
+               <p class="signin-text mt-0">You can <router-link to="/signup"><span class="signin-text-span">&nbsp;Sign Up!</span></router-link></p>
               </v-col>
             </v-row>
           </v-form>
