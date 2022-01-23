@@ -80,7 +80,7 @@ export default {
           {item: 'Technicians', route: '/', icon: 'mdi-account-multiple'},
           {item: 'Order', route: '/order', icon: 'mdi-cart'},
           {item: 'About Us', route: '/aboutus', icon: 'mdi-information-outline'},
-          {item: 'English', icon: 'mdi-translate'},
+          {item: 'Dashboard', route: '/dashboard', icon: 'mdi-translate'},
           {item: 'Signin', route: '/signin', icon: 'mdi-login-variant'},
           {item: 'Signup', route: '/signup', icon: 'mdi-login-variant'}
         ]

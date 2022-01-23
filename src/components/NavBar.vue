@@ -24,6 +24,8 @@
         <span class="mr-2">{{item.item}}</span>
       </v-btn>
     </div>
+    <v-spacer></v-spacer>
+    <v-btn to="/signin" color="grey" rounded>Signin</v-btn>
     <v-spacer class="hidden-lg-and-up"></v-spacer>
     <v-icon class="hidden-lg-and-up pl-0" large  @click="drawer = !drawer" color="black">mdi-menu</v-icon>
     </v-app-bar>
