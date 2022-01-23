@@ -25,7 +25,7 @@
       </v-btn>
     </div>
     <v-spacer></v-spacer>
-    <v-btn to="/signin" color="grey" rounded>Signin</v-btn>
+    <v-btn to="/signin" color="grey" rounded class="hidden-md-and-down">Signin</v-btn>
     <v-spacer class="hidden-lg-and-up"></v-spacer>
     <v-icon class="hidden-lg-and-up pl-0" large  @click="drawer = !drawer" color="black">mdi-menu</v-icon>
     </v-app-bar>
@@ -53,6 +53,11 @@
             <v-list-item-title class="grey--text" v-text="item.item"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item to="/signin">
+        <v-list-item-content>
+            <v-list-item-title class="grey--text">SIGNIN</v-list-item-title>
+          </v-list-item-content>
+          </v-list-item>
       </v-list-item-group>
     </v-list>
     </v-navigation-drawer>
