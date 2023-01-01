@@ -7,9 +7,13 @@
       class="pl-7 px-sm-12 px-md-16"
       :elevation="navProps.elevation"
     >
-      <div class="ml-md-3 ml-lg-0"></div>
-      <div class="ml-16 d-none d-lg-flex">
-        <v-btn
+      <div class="ml-md-3 ml-lg-0 text-h4" style="color: #f22e5d;">
+        KEMI.
+      </div>
+      <v-row justify="center">
+        <v-col cols="10">
+          <div class="ml-16 d-flex justify-center text-center">
+          <v-btn
           v-for="(item, index) in navProps.navBarItem"
           :key="index"
           color="#616161"
@@ -18,11 +22,11 @@
           active-class="active-class-nav red--text text--lighten-2 no-active text"
           text
         >
-          <!-- <v-icon v-if="item.icons"> {{item.icons}}</v-icon> -->
           <span class="mr-2">{{ item.item }}</span>
         </v-btn>
-      </div>
-      <v-spacer></v-spacer>
+        </div>
+      </v-col>
+      </v-row>
       <v-spacer class="hidden-lg-and-up"></v-spacer>
       <v-icon
         class="hidden-lg-and-up pl-0"

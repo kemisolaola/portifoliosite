@@ -1,4 +1,4 @@
-# flickwheel
+# portifolio
 
 ## Project setup
 ```

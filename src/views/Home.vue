@@ -29,57 +29,47 @@
       >
         <v-container class="pt-10 pb-13">
           <p class="profile-intro mt-13">
-            I am a Front End developer with industry experience building
-            websites and web applications. I specialize in JavaScript and have
+            I am a Frontend developer with industry experience building websites
+            and web applications. I specialize in JavaScript and have
             professional experience working with Vue.js. I also have experience
             working with and React and Node.js in an agile environment.
           </p>
-          <v-btn elevation="0" href="Oluwakemi_Shalewa Olatunji_Resume.pdf" class="download-btn">
+          <v-btn
+            elevation="0"
+            href="Oluwakemi_Shalewa Olatunji_Resume.pdf"
+            class="download-btn"
+          >
             DOWNLOAD RESUME
           </v-btn>
         </v-container>
       </v-col>
     </v-row>
-    <v-container class="mt-16 mb-3">
+    <v-container class="mt-16" fluid>
       <v-row justify="center" id="professional" class="">
-        <v-col cols="12" sm="11" md="10" lg="8">
-          <p class="text-center font-weight-bod home-header mb-0">
+        <v-col cols="12" sm="11" md="10">
+          <p class="text-center font-weight-bold home-header mb-0">
             <span class="home-header-span">01 </span>PROFESSIONAL
           </p>
           <p class="text-center profession-subtitle">
             MY KNOWLEGDE LEVEL IN SOFTWARE
           </p>
-          <v-container class="mt-15">
-            <v-row
-              class=""
-              justify="center"
-              v-for="(skill, index) in progressBar"
-              :key="index"
-            >
-              <v-col cols="4" sm="2" md="2" lg="4" class="py-0 text-right"
-                ><p class="skills-set text-right pr-1">
-                  {{ skill.skills }}
-                </p></v-col
+          <v-container class="mt-15" fluid>
+            <div class="d-flex justify-center">
+              <p
+                class="skills-set text-right px-3"
+                style="color: #f22e5d"
+                v-for="(skill, index) in progressBar"
+                :key="index"
               >
-              <v-col cols="7" class="pl-0 py-0 mt-1">
-                <v-progress-linear
-                  color="#F22E5D"
-                  :value="skill.value"
-                  class="progress-line mb-0"
-                  height="10"
-                  background-color="#FFFFFF"
-                ></v-progress-linear
-              ></v-col>
-              <v-col class="progress-num px-0 py-0" cols="1"
-                ><p class="skills-set">{{ skill.value }}%</p></v-col
-              >
-            </v-row>
+                {{ skill.skills }}
+              </p>
+            </div>
           </v-container>
         </v-col>
       </v-row>
     </v-container>
-    <v-container class="mt-7 mt-md-16" id="portifolio">
-      <v-row justify="center" class="mt-16">
+    <v-container class="mt-3" id="portifolio">
+      <v-row justify="center" class="mt-5">
         <v-col cols="12">
           <p class="text-center font-weight-bold home-header mb-0">
             <span class="home-header-span">02 </span>PORTOFOLIO
@@ -87,7 +77,7 @@
           <p class="text-center profession-subtitle">
             MY LATEST WORK. <span class="home-header-span"> SEE MORE ></span>
           </p>
-          <v-container class="mt-15">
+          <v-container class="mt-10">
             <v-row no-gutters justify="center">
               <img
                 v-for="(picture, index) in photoCollections"
@@ -103,9 +93,9 @@
       </v-row>
     </v-container>
     <!-- EXPERIENCE -->
-    <v-container class="mt-7 mt-md-16" id="experience">
-      <v-row justify="center" class="mt-16">
-        <v-col cols="12" sm="9" md="9" lg="7">
+    <v-container class="mt-7 mt-md-16" id="experience" fluid>
+      <v-row justify="center" class="mt-2">
+        <v-col cols="12" sm="10" md="10">
           <p class="text-center font-weight-bold home-header mb-0">
             <span class="home-header-span">03 </span>EXPERIENCE
           </p>
@@ -113,50 +103,80 @@
             <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
               <v-timeline-item color="#F22E5D" small fill-dot>
                 <v-card elevation="0" class="text-left">
-                  <p class="timeline-date mb-0">2019 - 2021</p>
-                  <p class="hop mb-0">HOP!</p>
-                  <p class="timeline-job-title mb-0">Creative Design Lead</p>
-                  <p class="timeline-job-info grey--text text--darken-2">
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes.
-                  </p>
+                  <p class="timeline-date mb-0">2022</p>
+                  <p class="hop mb-0">Sterling Bank Plc</p>
+                  <p class="timeline-job-title mb-0">Software Developer</p>
+                  <ul class="timeline-job-info grey--text text--darken-2 pl-0">
+                    <li>
+                      Re-configured loan processing for SMEs, increasing
+                      efficiency.
+                    </li>
+                    <li>
+                      Developed admin system for savings application, enabling
+                      admins to track customers transactions.
+                    </li>
+                    <li>
+                      Deployed new features to facilitate related procedures &
+                      tools if necessary
+                    </li>
+                    <li>
+                      Participated in architecture discussions and discussed
+                      solutions to system directly related to my area of focus.
+                    </li>
+                  </ul>
                 </v-card>
               </v-timeline-item>
               <v-timeline-item color="#F22E5D" small fill-dot>
                 <v-card elevation="0" class="text-md-right">
-                  <p class="timeline-date mb-0">2019 - 2021</p>
-                  <p class="hop mb-0">HOP!</p>
+                  <p class="timeline-date mb-0">2021 - 2022</p>
+                  <p class="hop mb-0">Outfit.NG</p>
                   <p class="timeline-job-title mb-0">Creative Design Lead</p>
-                  <p class="timeline-job-info grey--text text--darken-2">
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes.
-                  </p>
+                  <ul class="timeline-job-info grey--text text--darken-2">
+                    <li>
+                      Added features to a savings application enabling the users
+                      save money.
+                    </li>
+                    <li>
+                      Expanded scope of major bank web application,reducing
+                      customer churn.
+                    </li>
+                    <li>
+                      Re-configured loan processing for SMEs, increasing
+                      efficiency.
+                    </li>
+                    <li>
+                      Monitored websites' performance to ensure smooth user
+                      experience.
+                    </li>
+                    <li>
+                      Played major roles in the implementation of a new upgraded
+                      system.
+                    </li>
+                  </ul>
                 </v-card>
               </v-timeline-item>
               <v-timeline-item color="#F22E5D" small fill-dot>
                 <v-card elevation="0" class="text-left">
                   <p class="timeline-date mb-0">2019 - 2021</p>
-                  <p class="hop mb-0">HOP!</p>
-                  <p class="timeline-job-title mb-0">Creative Design Lead</p>
-                  <p class="timeline-job-info grey--text text--darken-2">
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes.
-                  </p>
-                </v-card>
-              </v-timeline-item>
-              <v-timeline-item color="#F22E5D" small fill-dot>
-                <v-card elevation="0" class="text-md-right">
-                  <p class="timeline-date mb-0">2019 - 2021</p>
-                  <p class="hop mb-0">HOP!</p>
-                  <p class="timeline-job-title mb-0">Creative Design Lead</p>
-                  <p class="timeline-job-info grey--text text--darken-2">
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes.
-                  </p>
+                  <p class="hop mb-0">RenoStack</p>
+                  <p class="timeline-job-title mb-0">Frontend Developer</p>
+                  <ul class="timeline-job-info grey--text text--darken-2 pl-0">
+                    <li>
+                      Successfully developed & implemented car rental, bid, &
+                      project management systems.
+                    </li>
+                    <li>
+                      Successfully wrote code for various web applications and
+                      websites.
+                    </li>
+                    <li>
+                      Documented test plans, testing procedures & results.
+                    </li>
+                    <li>
+                      Successfully collaborated with internal teams to execute
+                      work and meet schedule and budget expectations.
+                    </li>
+                  </ul>
                 </v-card>
               </v-timeline-item>
             </v-timeline>
@@ -264,13 +284,19 @@ export default {
         ],
       },
       progressBar: [
-        { skills: "WORDPRESS", value: 65 },
-        { skills: "FIGMA", value: 30 },
-        { skills: "GIT", value: 85 },
-        { skills: "PHOTOSHOP", value: 68 },
-        { skills: "ILLUSTRATOR", value: 70 },
-        { skills: "JAVASCRIPT", value: 95 },
-        { skills: "HTML & CSS", value: 90 },
+        { skills: "JAVASCRIPT" },
+        { skills: "HTML" },
+        { skills: "CSS" },
+        { skills: "VUE.JS" },
+        { skills: "NUXT" },
+        { skills: "REACT" },
+        { skills: "RESTAPI" },
+        { skills: "GRAPHQL" },
+        { skills: "BOOTSTRAP" },
+        { skills: "VUETIFY" },
+        { skills: "TAILWIND CSS" },
+        { skills: "GIT" },
+        { skills: "GITHUB" },
       ],
       photoCollections: [
         require("../assets/laptops.png"),
@@ -299,6 +325,9 @@ export default {
 };
 </script>
 <style scoped>
+ul {
+  list-style: none;
+}
 .top-container {
   background: #e2e2e4;
   background-image: url("../assets/profile-image.png");
