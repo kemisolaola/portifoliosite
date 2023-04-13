@@ -12,7 +12,7 @@
                 I<span class="span-profile-class">’</span>M OLATUNJI
                 OLUWAKEMI<span class="span-profile-class">.</span>
               </p>
-              <p class="profile-info-role mb-2">SOFTWARE DEVELOPER</p>
+              <p class="profile-info-role mb-2">FRONTEND DEVELOPER</p>
             </v-col>
           </v-row>
         </v-col>
@@ -29,12 +29,20 @@
       >
         <v-container class="pt-10 pb-13">
           <p class="profile-intro mt-13">
-            I am a Front End developer with industry experience building
-            websites and web applications. I specialize in JavaScript and have
-            professional experience working with Vue.js. I also have experience
-            working with and React and Node.js in an agile environment.
+            Hello! I'm a frontend developer, skilled in creating engaging and
+            interactive user interfaces for websites and web applications. I
+            have a strong foundation in HTML, CSS and JavaScript and I'm
+            experienced in using popular frontend frameworks such as Vue, Nuxt,
+            React and Next. As a frontend developer, I enjoy collaborating with
+            designers and backend developers to bring their visions to life and
+            create seamless, user-centric interfaces.
           </p>
-          <v-btn elevation="0" href="Oluwakemi_Shalewa Olatunji_Resume.pdf" class="download-btn">
+          <v-btn
+            elevation="0"
+            target="blank"
+            href="Olatunji Resume.pdf"
+            class="download-btn"
+          >
             DOWNLOAD RESUME
           </v-btn>
         </v-container>
@@ -42,62 +50,89 @@
     </v-row>
     <v-container class="mt-16 mb-3">
       <v-row justify="center" id="professional" class="">
-        <v-col cols="12" sm="11" md="10" lg="8">
+        <v-col cols="12" sm="11" md="10">
           <p class="text-center font-weight-bod home-header mb-0">
             <span class="home-header-span">01 </span>PROFESSIONAL
           </p>
           <p class="text-center profession-subtitle">
             MY KNOWLEGDE LEVEL IN SOFTWARE
           </p>
-          <v-container class="mt-15">
-            <v-row
-              class=""
-              justify="center"
-              v-for="(skill, index) in progressBar"
-              :key="index"
-            >
-              <v-col cols="4" sm="2" md="2" lg="4" class="py-0 text-right"
-                ><p class="skills-set text-right pr-1">
-                  {{ skill.skills }}
-                </p></v-col
+          <h3>SKILLS</h3>
+          <v-container fluid>
+            <h4 class="skills-header">LANGUAGES</h4>
+            <v-row>
+              <v-col
+                v-for="(language, index) in languages"
+                cols="4"
+                sm="2"
+                :key="index"
+                class="skills-set pr-1 pb-1"
               >
-              <v-col cols="7" class="pl-0 py-0 mt-1">
-                <v-progress-linear
-                  color="#F22E5D"
-                  :value="skill.value"
-                  class="progress-line mb-0"
-                  height="10"
-                  background-color="#FFFFFF"
-                ></v-progress-linear
-              ></v-col>
-              <v-col class="progress-num px-0 py-0" cols="1"
-                ><p class="skills-set">{{ skill.value }}%</p></v-col
+                {{ language }}
+              </v-col>
+            </v-row>
+          </v-container>
+          <v-container fluid class="mt-5">
+            <h4 class="skills-header">JAVASCRIPT FRAMEWORKS AND LIBRARIES</h4>
+            <v-row>
+              <v-col
+                v-for="(framework, index) in frameworks"
+                cols="4"
+                sm="2"
+                :key="index"
+                class="skills-set pr-1 pb-1"
               >
+                {{ framework }}
+              </v-col>
+            </v-row>
+          </v-container>
+          <v-container fluid class="mt-5">
+            <h4 class="skills-header">TOOLS</h4>
+            <v-row>
+              <v-col
+                v-for="(tool, index) in tools"
+                cols="4"
+                sm="2"
+                :key="index"
+                class="skills-set pr-1 pb-1"
+              >
+                {{ tool }}
+              </v-col>
             </v-row>
           </v-container>
         </v-col>
       </v-row>
     </v-container>
-    <v-container class="mt-7 mt-md-16" id="portifolio">
-      <v-row justify="center" class="mt-16">
+    <v-container class="mt-4" id="portifolio">
+      <v-row justify="center" class="mt-13">
         <v-col cols="12">
           <p class="text-center font-weight-bold home-header mb-0">
             <span class="home-header-span">02 </span>PORTOFOLIO
           </p>
           <p class="text-center profession-subtitle">
-            MY LATEST WORK. <span class="home-header-span"> SEE MORE ></span>
+            MY LATEST WORK. <span class="home-header-span"></span>
           </p>
           <v-container class="mt-15">
-            <v-row no-gutters justify="center">
-              <img
+            <swiper ref="mySwiper" :options="swiperOption">
+              <swiper-slide
+                class="swiper"
                 v-for="(picture, index) in photoCollections"
                 :key="index"
-                :src="picture"
-                width="30%"
-                height="30%"
-                contain
-              />
-            </v-row>
+                ><v-card
+                  class="mx-auto mb-10"
+                  max-width="344"
+                  :href="picture.to"
+                  hover
+                >
+                  <v-img :src="picture.img" height="200px" contain></v-img>
+
+                  <v-card-title class="font-weight-medium">
+                    {{ picture.name }}
+                  </v-card-title>
+                </v-card></swiper-slide
+              >
+              <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
           </v-container>
         </v-col>
       </v-row>
@@ -113,49 +148,40 @@
             <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
               <v-timeline-item color="#F22E5D" small fill-dot>
                 <v-card elevation="0" class="text-left">
-                  <p class="timeline-date mb-0">2019 - 2021</p>
-                  <p class="hop mb-0">HOP!</p>
-                  <p class="timeline-job-title mb-0">Creative Design Lead</p>
+                  <p class="timeline-date mb-0">Feb 2022 - Nov 2022</p>
+                  <p class="hop mb-0">Sterling Bank Plc</p>
+                  <p class="timeline-job-title mb-0">Frontend Developer</p>
                   <p class="timeline-job-info grey--text text--darken-2">
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes.
+                    Worked in an Agile environment and collaborated with team
+                    mates across various groups to achieve our goal. Led the
+                    frontend team of the loan application solutions and expanded
+                    scope of major bank web application, reducing customer
+                    churn.
                   </p>
                 </v-card>
               </v-timeline-item>
               <v-timeline-item color="#F22E5D" small fill-dot>
                 <v-card elevation="0" class="text-md-right">
-                  <p class="timeline-date mb-0">2019 - 2021</p>
-                  <p class="hop mb-0">HOP!</p>
-                  <p class="timeline-job-title mb-0">Creative Design Lead</p>
+                  <p class="timeline-date mb-0">Feb 2021 - Feb 2022</p>
+                  <p class="hop mb-0">Outfit.NG</p>
+                  <p class="timeline-job-title mb-0">Frontend Developer</p>
                   <p class="timeline-job-info grey--text text--darken-2">
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes.
+                    Contributed to the in-house UI library to create reusable
+                    components that saved over 200 hours of development time per
+                    month.Deployed new features to facilitate related procedures
+                    & tools if necessary.
                   </p>
                 </v-card>
               </v-timeline-item>
               <v-timeline-item color="#F22E5D" small fill-dot>
                 <v-card elevation="0" class="text-left">
-                  <p class="timeline-date mb-0">2019 - 2021</p>
-                  <p class="hop mb-0">HOP!</p>
-                  <p class="timeline-job-title mb-0">Creative Design Lead</p>
+                  <p class="timeline-date mb-0">Feb 2019 - Jan 2021</p>
+                  <p class="hop mb-0">Renostack Limited</p>
+                  <p class="timeline-job-title mb-0">Frontend Developer</p>
                   <p class="timeline-job-info grey--text text--darken-2">
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes.
-                  </p>
-                </v-card>
-              </v-timeline-item>
-              <v-timeline-item color="#F22E5D" small fill-dot>
-                <v-card elevation="0" class="text-md-right">
-                  <p class="timeline-date mb-0">2019 - 2021</p>
-                  <p class="hop mb-0">HOP!</p>
-                  <p class="timeline-job-title mb-0">Creative Design Lead</p>
-                  <p class="timeline-job-info grey--text text--darken-2">
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. It’s easy. Just click “Edit Text” or double click me to
-                    add your own content and make changes.
+                    Responsible for building the user interface and developing
+                    frontend architecture on various client projects using
+                    several technologies and methodologies.
                   </p>
                 </v-card>
               </v-timeline-item>
@@ -165,96 +191,78 @@
       </v-row>
     </v-container>
     <!-- Contact Us -->
-    <v-container fluid class="contact-me py-16" id="contact">
-      <v-row justify="center mt-4 pb-16">
-        <v-col cols="10" sm="10" md="9" lg="7">
-          <v-row justify="center">
-            <v-col cols="12" sm="5" md="4">
-              <p class="grey--text text--darken-2 font-weight-bold">CONTACT</p>
-              <p class="timeline-job-info grey--text text--darken-2">
-                I'm a paragraph. Click here to add your own text and edit me.
-                It’s easy. Just click “Edit Text” or double click me to add your
-                own content and make changes.
-              </p>
-              <p class="timeline-job-info grey--text text--darken-2">
-                bridgetmary.@gmail.com
-              </p>
-              <p class="timeline-job-info grey--text text--darken-4">
-                Tel: 080 7890 8982
-              </p>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <v-form>
-                <v-row>
-                  <v-col cols="12" sm="6" class="my-0 py-0">
-                    <v-text-field
-                      label="Name"
-                      outlined
-                      color="#DEB9C2"
-                      class="mb-0"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="6" class="my-0 py-0">
-                    <v-text-field
-                      label="Email"
-                      outlined
-                      color="#DEB9C2"
-                      class="mb-0"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" class="my-0 py-0">
-                    <v-text-field
-                      label="Phone"
-                      outlined
-                      color="#DEB9C2"
-                      class="mb-0"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" class="my-0 py-0">
-                    <v-textarea
-                      label="Message"
-                      outlined
-                      color="#DEB9C2"
-                      class="mb-0"
-                    >
-                    </v-textarea>
-                  </v-col>
-                  <v-col class="my-0 py-0">
-                    <v-btn
-                      color="#F22E5D"
-                      flat
-                      width="100%"
-                      dark
-                      height="55"
-                      depressed
-                      tile
-                      >Send</v-btn
-                    >
-                  </v-col>
-                </v-row>
-              </v-form>
-            </v-col>
-          </v-row>
+    <v-footer fluid class="contact-me pt-16" id="contact">
+      <v-row justify="mt-16">
+        <v-col cols="10" sm="10" md="9" lg="12">
+          <v-container class="d-flex justify-space-between">
+            <div class="d-flex">
+              <a href="https://github.com/kemisolaola"
+                ><v-icon class="mr-2"> mdi-github</v-icon></a
+              >
+              <a href="https://www.linkedin.com/in/oluwakemi-olatunji/"
+                ><v-icon class="mr-2"> mdi-linkedin</v-icon></a
+              >
+            </div>
+            <div>
+              <small class="text-xs text-right"
+                >© designed & built by Oluwakemi Olatunji ♥</small
+              >
+            </div>
+          </v-container>
         </v-col>
       </v-row>
-    </v-container>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
+import {
+  Swiper,
+  SwiperSlide,
+} from "vue-awesome-swiper/dist/vue-awesome-swiper.js";
+import "swiper/css/swiper.css";
 import NavBar from "../components/NavBar";
 export default {
   name: "Home",
   components: {
     NavBar,
+    Swiper,
+    SwiperSlide,
   },
   data() {
     return {
+      swiperOption: {
+        freeMode: true,
+        spaceBetween: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          1000: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+
+        }
+      },
       navProps: {
         activeClass: {},
-        elevation: "3",
+        elevation: "0",
         dark: "dark",
-        navColor: "#E2E2E4",
+        navColor: "#f5f5f5",
         navBarItem: [
           { item: "HOME", route: "/" },
           { item: "PROFESSIONAL", route: "#professional" },
@@ -263,19 +271,46 @@ export default {
           { item: "CONTACT", route: "#contact" },
         ],
       },
-      progressBar: [
-        { skills: "WORDPRESS", value: 65 },
-        { skills: "FIGMA", value: 30 },
-        { skills: "GIT", value: 85 },
-        { skills: "PHOTOSHOP", value: 68 },
-        { skills: "ILLUSTRATOR", value: 70 },
-        { skills: "JAVASCRIPT", value: 95 },
-        { skills: "HTML & CSS", value: 90 },
+      languages: ["HTML", "CSS", "JAVASCRIPT", "TYPESCRIPT"],
+      frameworks: [
+        "VUE.JS",
+        "NUXTJS",
+        "VUEX",
+        "TAILWIND",
+        "VUETIFY",
+        "BOOTSTRAP",
+        "REACT",
+        "NEXT.JS",
+      ],
+      tools: [
+        "GIT",
+        "GITHUB",
+        "MICROSOFT AZURE",
+        "VSCODE",
+        "NETLIFY",
+        "TRELLO",
       ],
       photoCollections: [
-        require("../assets/laptops.png"),
-        require("../assets/headset.png"),
-        require("../assets/phone.png"),
+        {
+          img: require("../assets/onebank-sterling.jpg"),
+          name: "ONEBANK",
+          to: "https://myonebank.sterling.ng/",
+        },
+        {
+          img: require("../assets/tbh-sterling.jpg"),
+          name: "THE BUSINESS HUB",
+          to: "https://thebusinesshub.ng/",
+        },
+        {
+          img: require("../assets/fortvest.jpg"),
+          name: "FORTVEST",
+          to: "https://myfortvest.ng/",
+        },
+        {
+          img: require("../assets/dice.jpg"),
+          name: "DICE MESSENGER",
+          to: "http://dicemessenger.com/",
+        },
       ],
       items: [
         {
@@ -299,14 +334,24 @@ export default {
 };
 </script>
 <style scoped>
-.top-container {
-  background: #e2e2e4;
-  background-image: url("../assets/profile-image.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 85%;
-  padding-bottom: 200px;
+@media (min-width: 768px) {
+  .top-container {
+    background: #e2e2e4;
+    /* background-image: url("../assets/profile-image.png"); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 85%;
+    padding-bottom: 200px;
+  }
 }
+
+@media (max-width: 767px) {
+  .top-container {
+    background: #e2e2e4;
+    padding-bottom: 200px;
+  }
+}
+
 .profile-info {
   font-size: 40px;
   line-height: 40px;
@@ -340,11 +385,17 @@ export default {
   color: black;
 }
 .skills-set {
-  font-size: 12px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
+  color: #616161;
   line-height: 21px;
+  display: inline-block;
   letter-spacing: 0.01em;
+  text-align: left;
+}
+.skills-header {
+  color: #343232;
   text-align: left;
 }
 .home-header-span {
@@ -405,5 +456,16 @@ export default {
 }
 .contact-me {
   background: #fff8f9;
+}
+
+.swiper-pagination >>> .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: #d7dce4 !important;
+  width: 6px;
+  height: 6px;
+}
+
+.swiper-pagination >>> .swiper-pagination-bullet-active {
+  background-color: #8b98b1 !important;
 }
 </style>

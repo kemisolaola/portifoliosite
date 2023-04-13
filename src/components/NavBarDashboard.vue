@@ -3,7 +3,7 @@
         <v-app-bar app :color = navProps.navColor dark class="pl-4 px-lg-16" :elevation= navProps.elevation>
       <div class="d-flex align-center">
         <v-img
-          alt="Flickwheel Logo"
+          alt="portifolio"
           class="shrink ml-16-lg mr-1 mr-lg-16"
           contain
           src="../assets/logo.png"

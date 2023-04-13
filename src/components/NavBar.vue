@@ -12,6 +12,7 @@
         <v-btn
           v-for="(item, index) in navProps.navBarItem"
           :key="index"
+          medium
           color="#616161"
           class="nav-btn font-weight-regular"
           :href="item.route"
